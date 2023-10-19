@@ -10,6 +10,11 @@ class TestOtp(UT.TestCase):
         expected = True
         self.assertEqual(result, expected)
 
+    def test_validatemail(self):
+        result = OTP.validatemail("jaypalkar@gmaicom")
+        expected = True
+        self.assertEqual(result, expected)
+
     def test_generateotp(self):
         otp_len = len(OTP.generateotp())
         expected_len = 6
